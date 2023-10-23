@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+/*SUBCLASES*/
+:root{
+    --padding-container: 100px 0;
+    --color-title:  #001A49;
+}
+/*----------*/
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 5% auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+    
+}
+
+
+.hero{
+color: white;
+width: 100%;
+height: 100vh;
+min-height: 600px;
+max-height: 800px;
+position: relative;
+display: grid;
+/* flex-direction: column; */
+grid-template-rows: 100px 1fr;
+}
+
+
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        180deg,#0000008c 0%,
+        #0000008c 100%), url("../images/player1.webp");
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1;
+
+}
+.nav{
+    --padding-container:0;
+    margin-top: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+   
+}
+
+.nav-title{
+    font-weight: 300;
+
+}
+
+.nav-link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+
+  
+}
+ .nav-links{
+    color: #fff;
+    text-decoration: none;
+ }
+ .nav-links:hover {
+    color: blue;
+
+ }
+
+
+.nav-items{
+    list-style: none;
+}
+
+
+.nav-menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-img{
+    display: block;
+    width: 30px;
+}
+
+.nav-close{
+    display: var(--show, none)
+}
+
+.cta{
+    color: orange;
+   text-decoration: none;
+}
+.cta:hover{
+    color:yellow;
+    text-decoration: none;
+}
+
+
+/*HERO CONTAINER*/
+
+.hero-container{
+    max-width: 800px;
+    display: grid;
+    --padding-container:0;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap:1em;
+    padding-bottom: 100x;
+    text-align: center;
+ 
+}
+
+.hero-title{
+    font-size: 3rem;
+
+}
+
+.hero-paragraph {
+    margin-bottom: 30px;
+}
+
+.cta {
+    display: inline;
+    background-color: #2091F9;
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 23px 30px;
+    border-radius: 30px;
+}
+
+
+/*about */
+
+.about {
+    text-align: center;
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about-paragraph{
+    line-height: 1.7;
+    font-size: 1.2rem;
+}
+
+.about-main{
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px,auto));
+    
+}
+
+.subtitle {
+    font-size: 2rem;
+}
+
+.about-icons{
+display: grid;
+gap: 1em;
+justify-items: center;
+width: 200px;
+box-sizing: border-box;
+margin: 0 auto;
+
+}
+
+/*Knowledge*/
+
+.knowledge {
+    background: radial-gradient(#4f46e4 15%, transparent 16%), linear-gradient(45deg, transparent 49%, #4f46e4 49% 51%, transparent 51%), linear-gradient(-45deg, transparent 49%, #4f46e4 49% 51%, transparent 51%);
+        background-size: .2em .2em;
+        background-color: #ffffff;
+        overflow: hidden
+}
+
+.knowledge-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.knowledgetexts {
+    text-align: center;
+}
+.knowledge-picture {
+    max-width: 800px;
+    
+}
+
+.knowledge-pic {
+    width: 100%;
+    display: block;
+}
+
+.knowledgep {
+    line-height: 1.7;
+    margin-bottom: 30px;
+        
+}
+
+.price   {
+    text-align: center;
+    overflow: visible;
+}
+
+.price-table {
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2.5em;
+    justify-content: space-evenly;
+    text-align: center;
+
+   
+    
+}
+
+.price-element {
+    background-color: cornflowerblue;
+    border-radius: 15px;
+    padding: 30px;
+    width: 300px;
+    padding: 40px;
+    overflow: hidden;
+    color: #170046;
+    animation: mover 5s infinite;
+}
+
+.best {
+    background-color: #FF7143;
+    padding: 70px 40px;
+    width: 400px;
+    position: relative;
+    animation: mover 3s infinite;
+    color: white;
+}
+
+.plan-price {
+    font-size: 2.5em;
+}
+
+.plan-cta {
+    background-color: white;
+    border-radius: 10px;
+    padding: 12px;
+    text-decoration: none;
+    color: #5454d4;
+}
+
+
+
+.best > .plan-cta {
+    background-color: #9f3919;
+    color: white;
+    
+    
+}
+
+
+.plan-items {
+
+    margin-top: 15px;
+    margin-bottom: 25px;
+    display: grid;
+    gap: 1em ;
+    font-weight: 300;
+    font-size: 1.2rem;
+    
+
+
+}
+
+
+/* Definimos la regla @keyframes llamada mover */
+
+@keyframes mover {
+    /* Al inicio de la animación, el contenedor está a la izquierda */
+    0% {
+      left: 0;
+    }
+    /* A la mitad de la animación, el contenedor está a la derecha */
+    50% {
+      left: 1%;
+    }
+    
+    /* Al final de la animación, el contenedor vuelve a la izquierda */
+    100% {
+      left: 0;
+    }
+  }
+
+.price-table > *:hover {
+    transform: translate(0, -50px) scale(1.05);
+    box-shadow: 10px 14px 50px 8px gray;
+
+ 
+
+}
+
